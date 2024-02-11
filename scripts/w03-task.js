@@ -73,12 +73,27 @@ nArray.innerHTML = numbersArray;
 
 
 /* Output Odds Only Array */
+const oddNumbers = numbersArray.filter(num => num % 2 !== 0);
+const oNumbers = document.getElementById("odds");
+oNumbers.innerHTML = oddNumbers;
 
 
 /* Output Evens Only Array */
+document.querySelector("#evens").innerHTML = numbersArray.filter(number => number % 2 === 0);
 
 /* Output Sum of Org. Array */
+const sumOfOrg = numbersArray.reduce((sum, number) => sum + number);
+const soo = document.getElementById("sumOfArray");
+soo.innerHTML = sumOfOrg;
 
 /* Output Multiplied by 2 Array */
+const multBy2Array = numbersArray.map(number => number * 2);
+const mb2a = document.getElementById("multiplied");
+mb2a.innerHTML = multBy2Array;
 
 /* Output Sum of Multiplied by 2 Array */
+
+const multArray = numbersArray.map(number => number * 2);
+const sumOfMultArray = multArray.reduce((sum, number) => sum + number);
+const somb2a = document.getElementById("sumOfMultiplied");
+somb2a.innerHTML = sumOfMultArray;
