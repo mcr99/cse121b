@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 121b | Project </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav>
+        <ul id="menu">
+          <li><a id="toggleMenu">&equiv;</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="w01-task.html">W1 Task</a></li>
+          <li><a href="w03-task.html">W3 Task</a></li>
+          <li><a href="w04-task.html" class="active">W4 Task</a></li>
+          <li><a href="w05-task.html">W5 Task</a></li>
+          <li><a href="project.html">Project</a></li>
+        </ul>
+      </nav>
+    
+      <main id="employee">
+        <h1>Project</h1>
+        <h2>Employee information</h2>
+    
+        <select id="employeefilter" title="Choose a data filter.">
+          <option value="" disabled selected>Filter Employee</option>
+          <option value="suite">Lives in Suite</option>
+          <option value="apt">Lives in Apartment</option>
+          <option value="older">Born before 2000</option>
+          <option value="younger">Born after 2000</option>
+          <option value="all">No Filter</option>
+        </select>
+
+        <label for="firstName">Enter First Name:</label>
+        <input type="text" id="firstName" name="firstName" required minlength="1" maxlength="10" size="10" />
+
+        <label for="lastName">Enter Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required minlength="1" maxlength="10" size="10" />
+    
+        <div id="Employees">
+        </div>
+      </main>
+
+
+
+
+
+    <footer>
+      &copy;<span id="year"></span> | Project | CSE 121b
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script src="scripts/project.js"></script>
+</body>
+</html>
